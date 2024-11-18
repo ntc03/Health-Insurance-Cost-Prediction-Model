@@ -28,13 +28,21 @@ This project explores a health insurance dataset to understand the factors affec
 
 ## Model and Performance
 Random Forest Regression model chosen to handle potentially non-linear relationships 
+### Feature Engineering 
+Added:
+- BMI/Smoking Interaction Term
+- Obesity Status: Indicator for individuals with BMI ≥ 30.
+- Smoker's Obesity Status
 ### Filter Method / Tuning
 - Used RFECV as a robust means of filtering method to search for important variables
 - GridSearchCV to identify optimal hyperparameters for tuning prediction model 
 ### Evaluation Metrics
-- Baseline MSE: 171117708
-- Optimized MSE: 23102335
+Baseline Model: 
+- Mean Squared Error (MSE): 171117708 (untuned model with no feature engineering)
+Optimized Model:
+- MSE: 23102335
 - R² Score: 0.86
 
 ## Next Steps
-Implement additional machine learning algorithms (e.g. XGBoost, Gradient Boosting, LightGBM)
+- Implement additional machine learning algorithms (e.g. XGBoost, Gradient Boosting, LightGBM)
+- Achieve better performance with new algorithms
